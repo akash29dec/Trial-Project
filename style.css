@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #3d3d3d;
+  background: radial-gradient(
+      circle,
+      #d1afae, /* Color near the container */
+      #c5877f 40%, /* Midpoint color */
+      rgb(229, 175, 180) 80%  /* Outermost edge color */
+  );
+  height: 100%; /* Ensure the body takes full height */
+}
+
+body{
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: 100%;
+  min-height: 180vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+
+.page .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  width: 100vw;
+  margin-top: 20vh;
+  height: 25vh;
+}
+
+.page .content {
+  max-width: 1400px;
+  padding: 10px;
+}
+
+.page .last-line {
+  text-align: right;
+  padding-top: 1em;
+}
+
+.page ::-moz-selection {
+  background: #F7C02D;
+}
+
+.page ::selection {
+  background: #F7C02D;
+}
+
+.scroll-msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+ padding-top: 2em;
+}
+
+.scroll-msg > div:nth-child(1) {
+  margin-top: -10vh;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+canvas#fire-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+
+.arrow-animated {
+  font-size: 1em;
+  animation: arrow-float 1s infinite;
+}
+
+@keyframes arrow-float {
+  0% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+  }
+  60% {
+      transform: translateY(50%);
+      animation-timing-function: ease-in-out;
+  }
+  100% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+  }
+}
+
+.imgcontainer {
+  background-color: #ffffff; /* White background for the carousel container */
+  width: 100%; /* Set a percentage width for responsiveness */
+  max-width: 1600px; /* Optional: Set a maximum width */
+  border-radius: 10px; /* Optional: Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for the container */
+  padding: 20px; /* Add some padding around the carousel */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.image1 {
+  font-family: 'Great Vibes', cursive !important; /* Valentine type font */
+  font-size: 24px !important;
+  color: #e91e63 !important;
+  font-weight: 500 !important;
+  margin: 14px !important;
+}
+
+.image1para {
+  font-family: 'Roboto', sans-serif !important; /* Clean and modern font */
+  font-size: 18px !important;
+  color: #fff7e0 !important; /* Deep red color */
+  margin: -10px !important;
+}
+
+.image2{
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 24px !important;
+  color: #8e3b46 !important; 
+  font-weight: 900 !important;
+  margin: 25px !important;
+}
+
+.image2para{
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  color: #4e2c2a !important; /* Light cream for readability */
+  margin: -15px !important;
+  font-weight: 900 !important;
+}
+
+.image5para{
+  margin-bottom: -18px !important;
+  color: #211313 !important;
+  font-weight: 680;
+}
+
+.image10para{
+  margin-bottom: -12px !important;
+  color: #211313 !important;
+  font-weight: 680;
+}
+
+.scroll-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8d7da;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Cursive', sans-serif;
+}
+
+.heart {
+  font-size: 2rem;
+  color: #ff6b6b;
+  display: flex;
+  align-items: center;  /* Center the content vertically */
+  justify-content: center;  /* Center the content horizontally */
+}
+
+.romantic-text {
+  font-size: 1.5rem;
+  color: #c2185b;
+  text-align: center;
+}
+
+.arrow-animated {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  animation: bounce 2s infinite;
+}
+
+@keyframes beat {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f0e3; /* Romantic, soft background */
+  overflow: hidden;
+}
+
+#gift-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.box {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, #f9c4d2, #ff6392); /* Gradient soft romantic box color */
+  position: absolute;
+  top: 0;
+}
+
+.left-half {
+  left: 0;
+  border-right: 2px solid #ff6392; /* Romantic pink border for left half */
+}
+
+.right-half {
+  right: 0;
+  border-left: 2px solid #ff6392; /* Romantic pink border for right half */
+}
+
+.message {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #ff6392;
+}
+
+.hidden {
+  display: none;
+}
+
+#site-content {
+  display: none;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+#site-content header {
+  padding: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff6392; /* Romantic pink header */
+}
+
+#site-content main {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #6b4f4f; /* Soft brown for content */
+}
+
+/* Keyframes for the box tearing animation */
+@keyframes tearOpenLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tearOpenRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Fade in effect for the website content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply a pinkish tone to the entire background */
+html, body {
+  background: radial-gradient(
+      circle,
+      #d1afae, /* Color near the container */
+      #c5877f 40%, /* Midpoint color */
+      rgb(229, 175, 180) 80%  /* Outermost edge color */
+  );
+/* Light pink background color */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  height: 100%; /* Ensure the body takes full height */
+}
+
+body {
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  overflow: hidden; /* Hide scrollbars to ensure full viewport coverage */
+}
+
+.imgcontainer {
+  background-color: #ffffff; /* White background for the carousel container */
+  width: 80%; /* Set a percentage width for responsiveness */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  border-radius: 10px; /* Optional: Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for the container */
+  padding: 20px; /* Add some padding around the carousel */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.image1 {
+  font-family: 'Great Vibes', cursive !important; /* Valentine type font */
+  font-size: 24px !important;
+  color: #e91e63 !important;
+  font-weight: 500 !important;
+  margin: 5px !important;
+}
+
+.image1para {
+  font-family: 'Roboto', sans-serif !important; /* Clean and modern font */
+  font-size: 18px !important;
+  color: #fff7e0 !important; /* Deep red color */
+  margin-top: 5px !important;
+  margin-bottom: -17px !important;
+}
+
+.image2{
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 24px !important;
+  color: #8e3b46 !important; 
+  font-weight: 900 !important;
+  margin: 25px !important;
+}
+
+.image2para{
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  color: #4e2c2a !important; /* Light cream for readability */
+  margin: -15px !important;
+  font-weight: 900 !important;
+}
+
+.image5para{
+  margin-bottom: -24px !important;
+  color: #211313 !important;
+  font-weight: 680;
+}
+
+.image10para{
+  margin-bottom: -12px !important;
+  color: #211313 !important;
+  font-weight: 680;
+}
+
+/* General styling for the carousel on all screens */
+.imgcontainer {
+  width: 80%; /* Default width for larger screens like laptops */
+  max-width: 1600px; /* Optional: Set a maximum width */
+  padding: 20px; /* Default padding */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Responsive adjustments for smartphones */
+@media (max-width: 768px) {
+  .imgcontainer {
+    width: 95%; /* Increase width for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .carousel-item img {
+    height: auto; /* Allow the height to scale */
+    max-height: 450px; /* Increase the maximum height for smartphones */
+  }
+
+  .carousel-caption h5, .carousel-caption p {
+    font-size: 16px !important; /* Decrease font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .imgcontainer {
+    width: 100%; /* Take full width on very small screens */
+    padding: 5px; /* Reduce padding on very small screens */
+  }
+
+  .carousel-item img {
+    max-height: 500px; /* Further increase the maximum height for very small screens */
+  }
+
+  .carousel-caption h5, .carousel-caption p {
+    font-size: 14px !important; /* Further decrease text size */
+  }
+}
